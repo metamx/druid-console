@@ -1,0 +1,14 @@
+apiVersion: v1
+appVersion: latest
+description: A Helm chart for druid console mmx
+engine: gotpl
+icon: https://metamarkets.com/wp-content/themes/metamarkets/images/metamarkets-logo.png
+keywords:
+- druid-console
+maintainers:
+- email: backend@metamarkets.com
+  name: backend
+name: druid-console
+sources:
+- https://github.com/metamx/druid-console
+version: 1.0

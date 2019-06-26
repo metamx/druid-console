@@ -22,3 +22,10 @@ export ZK_HOSTNAME="zookeeper.sweet.com"
 export ZK_SERVICE_DISC_PATH="/path/to/discovery"
 ./run-server
 ```
+
+## Install helm chart
+
+    helm upgrade --install druid-console chart/druid-console \
+        --namespace druid-console \
+        -f chart/druid-console/values.${ENV}.yaml \
+        --install 

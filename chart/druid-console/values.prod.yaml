@@ -1,0 +1,15 @@
+image: gcr.io/metamarkets-prod-xpn-host/druid-console
+type: server
+environment:
+  name: metrics
+  zk_hostname: zk.metamx-prod.com
+  zk_service_disc_path: /prod/discovery
+  node_env: production
+resources:
+  limits:
+    cpu: 0.5
+    memory: 128Mi
+  replicas: 1
+  requests:
+    cpu: 0.1
+    memory: 128Mi

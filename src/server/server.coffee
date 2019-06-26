@@ -73,7 +73,7 @@ app.all('/pass/coordinator/:cluster*', (req, res) ->
     console.log("Proxying to druid coordinator at #{getHttpHostAndPort(loc)}#{req.url}")
 
     doOnCoordinator(loc, res, (coordHostPort) =>
-      target = if coordHostPort.indexOf("http") < 0 then "http://#{coordHostPort}" else coordHostPort
+      target = if coordHostPort.indexOf("http") < 0 then "#{coordHostPort}" else coordHostPort
       proxy.web(req, res, {target})
     )
   ).catch((err) ->
